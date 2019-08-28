@@ -30,6 +30,7 @@ To do:
 - Run `composer install`
 - Run `sudo chgrp -R www-data storage bootstrap/cache`
 - Run `sudo chmod -R ug+rwx storage bootstrap/cache`
+- Run `touch database/database.sqlite`
 - Run `php artisan migrate:refresh --seed`
 - Run `./vendor/bin/phpunit tests/` for PHPUnit test
 
