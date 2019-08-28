@@ -26,7 +26,7 @@ Make Sure you have installed inyour PC:
 - Composer (https://getcomposer.org/)
 
 To do:
-
+- Run `sh ./start.sh` or following
 - Run `composer install`
 - Run `sudo chgrp -R www-data storage bootstrap/cache`
 - Run `sudo chmod -R ug+rwx storage bootstrap/cache`
