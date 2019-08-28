@@ -15,7 +15,15 @@ DDD: src/
 
 
 ### Installation
-Make Sure you have installed inyour PC:
+####With Docker:
+Make sure: 
+* `docker` & `docker-compose` installed in your PC.
+
+- Run `sh ./docker-start.sh`
+
+####Without Docker:
+
+Make Sure you have installed in your PC:
 
 - PHP >= 7.1.3
 - OpenSSL PHP Extension
