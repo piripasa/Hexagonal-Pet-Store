@@ -35,13 +35,13 @@ To do:
 
 
 Use case/Domain Command:
-  `php artisan pets:chip-implant`             Implant Chip
-  `php artisan pets:create`                   Add new pet
-  `php artisan pets:move-to-backyard`         Move pet to backyard from showroom
-  `php artisan pets:move-to-showroom`         Move pet to showroom from backyard
-  `php artisan pets:sell`                     Sell pet
-  `php artisan pets:showroom-list`            Show list of pets that should be in the showroom
-  `php artisan pets:vet-list`                 Show list of pets that should go to vet
-  `php artisan orders:deliver`                Deliver pending pet order
-  `php artisan customers:pending-order-list`  Show list of customers that need to be contacted
+- `php artisan pets:chip-implant`             Implant Chip
+- `php artisan pets:create`                   Add new pet
+- `php artisan pets:move-to-backyard`         Move pet to backyard from showroom
+- `php artisan pets:move-to-showroom`         Move pet to showroom from backyard
+- `php artisan pets:sell`                     Sell pet
+- `php artisan pets:showroom-list`            Show list of pets that should be in the showroom
+- `php artisan pets:vet-list`                 Show list of pets that should go to vet
+- `php artisan orders:deliver`                Deliver pending pet order
+- `php artisan customers:pending-order-list`  Show list of customers that need to be contacted
 
