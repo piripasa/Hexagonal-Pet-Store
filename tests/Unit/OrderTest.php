@@ -19,11 +19,15 @@ class OrderTest extends TestCase
         $this->artisan('db:seed');
     }
 
-    public function testDeliverPendingOrderSuccess()
+    public function testDeliverPendingOrderOnMonday()
     {
         $class = app(DeliverPendingOrder::class);
-        $object = $class(1);
-        $this->assertIsInt($object->id);
+        try {
+            $class(1);
+            $this->fail('No exception was thrown');
+        } catch (\Exception $e) {
+            $this->assertEquals($e->getMessage(), 'Pending order deliver only on Monday');
+        }
     }
 
     public function testDeliverPendingOrderFail()

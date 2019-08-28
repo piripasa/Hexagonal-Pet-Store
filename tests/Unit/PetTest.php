@@ -151,6 +151,57 @@ class PetTest extends TestCase
         }
     }
 
+    public function testPetSellWithUpfrontSuccess()
+    {
+        $class = app(Sellpet::class);
+        $response = $class(1, 5, null, 'yes');
+        $this->assertIsInt($response->id);
+    }
+
+    public function testPetSellWithUpfrontFail()
+    {
+        $class = app(Sellpet::class);
+        try {
+            $class(1, 5, null, 'no');
+            $this->fail('No exception was thrown');
+        } catch (\Exception $e) {
+            $this->assertInstanceOf(\Exception::class, $e);
+        }
+    }
+
+    public function testPetSellCustomerNotFound()
+    {
+        $class = app(Sellpet::class);
+        try {
+            $class(10, 1);
+            $this->fail('No exception was thrown');
+        } catch (\Exception $e) {
+            $this->assertEquals($e->getMessage(), 'Customer not found');
+        }
+    }
+
+    public function testPetSellPetNotFound()
+    {
+        $class = app(Sellpet::class);
+        try {
+            $class(1, 100);
+            $this->fail('No exception was thrown');
+        } catch (\Exception $e) {
+            $this->assertEquals($e->getMessage(), 'Pet not found');
+        }
+    }
+
+    public function testBackyardPetNotForSell()
+    {
+        $class = app(Sellpet::class);
+        try {
+            $class(1, 3);
+            $this->fail('No exception was thrown');
+        } catch (\Exception $e) {
+            $this->assertEquals($e->getMessage(), 'Backyard pet not for sell');
+        }
+    }
+
     public function tearDown()
     {
         parent::tearDown();
